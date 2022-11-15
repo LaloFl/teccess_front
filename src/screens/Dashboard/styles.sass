@@ -1,0 +1,20 @@
+@import '../../vars.sass'
+
+.dashboard_layout
+    display: flex
+    @media screen and (max-width: $sm)
+        flex-direction: column
+
+.dashboard_screen
+    padding: 40px
+    h1
+        background-color: #222
+        padding: 10px 30px 10px 30px
+        border-radius: 5px
+    .box
+        background-color: $bg-lighter
+        padding: 10px
+        border-radius: 5px
+
+    @media screen and (max-width: $sm)
+        padding: 20px
