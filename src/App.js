@@ -3,7 +3,9 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 // SCREENS
 import Dashboard from "./screens/Dashboard";
-import DashboardManage from "./screens/DashboardManage";
+import DashboardAdmins from "./screens/DashboardAdmins";
+import DashboardAdd from "./screens/DashboardAdd";
+import DashboardReport from "./screens/DashboardReport";
 import Home from "./screens/Home";
 
 // GLOBAL STYLES
@@ -16,7 +18,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route element={<Dashboard />}>
-            <Route path="/dashboard" element={<DashboardManage />} />
+            <Route path="/dashboard" element={<DashboardReport />} />
+            <Route path="/dashboard/admins" element={<DashboardAdmins />} />
+            <Route path="/dashboard/add" element={<DashboardAdd />} />
           </Route>
         </Routes>
       </BrowserRouter>
