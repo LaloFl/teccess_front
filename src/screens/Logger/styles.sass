@@ -1,0 +1,78 @@
+@import '../../vars'
+
+$top-margin: 40px
+
+.logger_screen
+    display: flex
+    flex-direction: column
+    height: 100vh
+    header
+        margin-top: $top-margin
+        padding: 20px
+        position: relative
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .exit_button
+            position: absolute
+            top: -$top-margin
+            right: 0
+            a
+                color: #d44
+                text-decoration: none
+                &:hover
+                    color: #d22
+        h1
+            margin-left: 130px
+            width: 400px
+        input
+            border-radius: 2px
+            border: 1px solid #555
+            background-color: #333
+            font-size: 16px
+            color: #888
+            padding: 5px
+            width: 200px
+            &:focus
+                outline: none
+                border: 1px solid #555
+                color: #555
+            // &:not(:focus)
+            //     background-color: #a88
+    main
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 100%
+        .box_data_false
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin-top: -5rem
+            svg
+                animation: barcode_animation 5s infinite linear
+        .box_data_true
+            display: flex
+            flex-direction: column
+            align-items: center
+
+#logo
+    position: absolute
+    height: 90%
+    left: 0
+
+@keyframes barcode_animation
+    0%
+        transform: rotate(0deg)
+    1%
+        transform: rotate(5deg)
+    2%
+        transform: rotate(0deg)
+    3%
+        transform: rotate(0deg)
+    4%
+        transform: rotate(5deg)
+    5%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(0deg)

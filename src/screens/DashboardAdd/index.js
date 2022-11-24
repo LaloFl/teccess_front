@@ -7,6 +7,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import "./styles.sass";
+import { computeHeadingLevel } from "@testing-library/react";
 
 export default function DashboardAdd() {
   const formFields = [
@@ -121,6 +122,19 @@ export default function DashboardAdd() {
       .then((res) => {
         console.log(res);
         toast("✅ ¡Estudiante agregado!", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        toast("❌ ¡Error de servidor!", {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
